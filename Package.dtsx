@@ -1,0 +1,1182 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/11/2025 9:28:16 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MINI-RAIDERW"
+  DTS:CreatorName="MINI-RAIDERW\Daniel"
+  DTS:DTSID="{F632601B-C4A5-41B6-AA84-7984AC8BD05F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="2058"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{397208EE-9B6D-4100-B523-F2706E7B59D4}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{44718C7E-82B2-4742-99EF-AE0B9EECCDAC}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\ETL\Errores.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9AEEC26B-030C-42F8-9124-12B90A994FEA}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2058"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\ETL\Errores.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WagerID"
+              DTS:DTSID="{4DF39978-7C6A-471A-B57B-57220AEB9626}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PlayerID"
+              DTS:DTSID="{AD1B5DBA-9BD6-4F08-B644-F35CEF4A467E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AgentID"
+              DTS:DTSID="{FFA11297-17C2-46F7-81C8-60716B86942B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BookID"
+              DTS:DTSID="{F5739EA6-876B-454B-B531-EED6BD9B5134}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EventID"
+              DTS:DTSID="{1B1C296B-4A99-46CC-95E2-66923F7F2D1A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EventName"
+              DTS:DTSID="{B0B3AEBC-C933-4CE3-92E9-0762AD448D71}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sport"
+              DTS:DTSID="{E17BA42E-BDE8-4695-90BF-445BB63EA06B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Amount"
+              DTS:DTSID="{93E11D67-9DB1-48DA-9495-08F3BF338AFE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="5"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Odds"
+              DTS:DTSID="{EAB141E8-289E-4678-98AC-21C05469EE96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Won"
+              DTS:DTSID="{E90571E4-AB1A-439E-B8D7-69836D0910E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PlacedAt"
+              DTS:DTSID="{570C85AE-2B9A-401B-84EB-987EB43F57F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EventDate"
+              DTS:DTSID="{78361720-1C23-4A86-AA7B-A12622A35A3C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{CD7B4480-5AB2-47E7-AB50-AFA10EC66059}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{2EA41E0F-0674-41BB-BBAB-FDB2EA4F5980}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PostgreSQL17.postgres 1]"
+      DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{08712C72-0B14-4DC3-87FD-AB26A9A24380}"
+      DTS:ObjectName="PostgreSQL17.postgres 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=postgres;Dsn=PostgreSQL17;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAz4Pfno6oLEGS0CJpJ7+B0wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD5O5iYNFPfbBwzYAtntWOrIoSpYKE1fGx04cBl2aGOUgAAAAAOgAAAAAIAACAAAADDdEy7aQCZHvQRX6M+pMQoVle1LsE1Cx+t1/dIwvHvCSAAAAB4/uB269Z6h+jijF65ikXhUEQaY6kLQYedYxtOiqB0L0AAAADZn945KwFQNpyjQ1gGtTh4hHxBzGfNqf1MAwPjID1fRPnpCuMVdCAr+yXeDW4oAtuK8nstfi3OE5qjY4DfoeJJ</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D59835A0-FE60-44EA-947F-92F5ADDC1960}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Apuestas Diarias OLTP (E)"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Apuestas Diarias OLTP (E)"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        Wagers.WagerID, Wagers.PlayerID, Agents.AgentID, Books.BookID, Events.EventID, Events.EventName, Events.Sport, Wagers.Amount, Wagers.Odds, Wagers.Won, Wagers.PlacedAt, Events.EventDate
+FROM            Agents INNER JOIN
+                         Books ON Agents.BookID = Books.BookID INNER JOIN
+                         Players ON Agents.AgentID = Players.AgentID INNER JOIN
+                         Wagers ON Players.PlayerID = Wagers.PlayerID INNER JOIN
+                         Events ON Wagers.EventID = Events.EventID
+WHERE        (CAST(Wagers.PlacedAt AS DATE) = CAST(DATEADD(DAY, - 1, GETDATE()) AS DATE))</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."View_ETL_Diario"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Connections[IDbConnection]"
+                  connectionManagerID="{CD8906F4-4C5F-44D0-AB56-E04C488342FB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MINI-RAIDERW.SportsbookOLTP]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[WagerID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[WagerID]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[WagerID]"
+                      name="WagerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[PlayerID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[PlayerID]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[PlayerID]"
+                      name="PlayerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[AgentID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[AgentID]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[AgentID]"
+                      name="AgentID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[BookID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[BookID]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[BookID]"
+                      name="BookID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[EventID]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventID]"
+                      name="EventID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[EventName]"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventName]"
+                      name="EventName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Sport]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[Sport]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Sport]"
+                      name="Sport"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Amount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[Amount]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Amount]"
+                      name="Amount"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Odds]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[Odds]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Odds]"
+                      name="Odds"
+                      precision="5"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Won]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[Won]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Won]"
+                      name="Won"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[PlacedAt]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[PlacedAt]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[PlacedAt]"
+                      name="PlacedAt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[EventDate]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventDate]"
+                      name="EventDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[WagerID]"
+                      dataType="i4"
+                      name="WagerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[PlayerID]"
+                      dataType="i4"
+                      name="PlayerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[AgentID]"
+                      dataType="i4"
+                      name="AgentID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[BookID]"
+                      dataType="i4"
+                      name="BookID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[EventID]"
+                      dataType="i4"
+                      name="EventID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[EventName]"
+                      dataType="wstr"
+                      length="100"
+                      name="EventName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[Sport]"
+                      dataType="wstr"
+                      length="50"
+                      name="Sport" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[Amount]"
+                      dataType="numeric"
+                      name="Amount"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[Odds]"
+                      dataType="numeric"
+                      name="Odds"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[Won]"
+                      dataType="bool"
+                      name="Won" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[PlacedAt]"
+                      dataType="dbTimeStamp"
+                      name="PlacedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].ExternalColumns[EventDate]"
+                      dataType="dbTimeStamp"
+                      name="EventDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[WagerID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[WagerID]"
+                      name="WagerID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[PlayerID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[PlayerID]"
+                      name="PlayerID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[AgentID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[AgentID]"
+                      name="AgentID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[BookID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[BookID]"
+                      name="BookID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[EventID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[EventID]"
+                      name="EventID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[EventName]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[EventName]"
+                      name="EventName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[Sport]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[Sport]"
+                      name="Sport" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[Amount]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[Amount]"
+                      name="Amount"
+                      precision="10"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[Odds]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[Odds]"
+                      name="Odds"
+                      precision="5"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[Won]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[Won]"
+                      name="Won" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[PlacedAt]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[PlacedAt]"
+                      name="PlacedAt" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[EventDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[EventDate]"
+                      name="EventDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Apuestas OLAP (L)"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Apuestas OLAP (L)"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"public"."wager_details"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Apuestas OLAP (L).Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PostgreSQL17.postgres 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[PostgreSQL17.postgres 1]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[Sport]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Sport"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[sport]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Sport]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[Amount]"
+                      cachedDataType="numeric"
+                      cachedName="Amount"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[amount]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Amount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[Odds]"
+                      cachedDataType="numeric"
+                      cachedName="Odds"
+                      cachedPrecision="5"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[odds]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Odds]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[WagerID]"
+                      cachedDataType="i4"
+                      cachedName="WagerID"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[wager_id]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[WagerID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[PlayerID]"
+                      cachedDataType="i4"
+                      cachedName="PlayerID"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[player_id]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[PlayerID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[AgentID]"
+                      cachedDataType="i4"
+                      cachedName="AgentID"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[agent_id]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[AgentID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[BookID]"
+                      cachedDataType="i4"
+                      cachedName="BookID"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[book_id]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[BookID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[EventID]"
+                      cachedDataType="i4"
+                      cachedName="EventID"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[event_id]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[EventName]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="EventName"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[event_name]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[PlacedAt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PlacedAt"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[placed_at]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[PlacedAt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[EventDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="EventDate"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[event_date]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].Columns[WonAsBooleanText]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="WonAsBooleanText"
+                      externalMetadataColumnId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[won]"
+                      lineageId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Output].Columns[WonAsBooleanText]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[wager_id]"
+                      dataType="i4"
+                      name="wager_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[player_id]"
+                      dataType="i4"
+                      name="player_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[agent_id]"
+                      dataType="i4"
+                      name="agent_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[book_id]"
+                      dataType="i4"
+                      name="book_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[event_id]"
+                      dataType="i4"
+                      name="event_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[event_name]"
+                      dataType="wstr"
+                      length="8190"
+                      name="event_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[sport]"
+                      dataType="wstr"
+                      length="8190"
+                      name="sport" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[amount]"
+                      dataType="numeric"
+                      name="amount"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[odds]"
+                      dataType="numeric"
+                      name="odds"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[won]"
+                      dataType="wstr"
+                      length="5"
+                      name="won" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[placed_at]"
+                      dataType="dbTimeStamp"
+                      name="placed_at" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET].ExternalColumns[event_date]"
+                      dataType="dbTimeStamp"
+                      name="event_date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Apuestas OLAP (L).Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Apuestas OLAP (L).Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Apuestas OLAP (L).Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Apuestas OLAP (L).Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="2058"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[WagerID]"
+                      cachedDataType="i4"
+                      cachedName="WagerID"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[WagerID]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[WagerID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[PlayerID]"
+                      cachedDataType="i4"
+                      cachedName="PlayerID"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PlayerID]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[PlayerID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[AgentID]"
+                      cachedDataType="i4"
+                      cachedName="AgentID"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AgentID]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[AgentID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[BookID]"
+                      cachedDataType="i4"
+                      cachedName="BookID"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BookID]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[BookID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[EventID]"
+                      cachedDataType="i4"
+                      cachedName="EventID"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EventID]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[EventName]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="EventName"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EventName]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Sport]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Sport"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Sport]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Sport]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Amount]"
+                      cachedDataType="numeric"
+                      cachedName="Amount"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Amount]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Amount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Odds]"
+                      cachedDataType="numeric"
+                      cachedName="Odds"
+                      cachedPrecision="5"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Odds]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Odds]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Won]"
+                      cachedDataType="bool"
+                      cachedName="Won"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Won]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Won]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[PlacedAt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="PlacedAt"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PlacedAt]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[PlacedAt]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[EventDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="EventDate"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EventDate]"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[EventDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[WagerID]"
+                      dataType="i4"
+                      name="WagerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PlayerID]"
+                      dataType="i4"
+                      name="PlayerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AgentID]"
+                      dataType="i4"
+                      name="AgentID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BookID]"
+                      dataType="i4"
+                      name="BookID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EventID]"
+                      dataType="i4"
+                      name="EventID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EventName]"
+                      dataType="wstr"
+                      length="100"
+                      name="EventName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Sport]"
+                      dataType="wstr"
+                      length="50"
+                      name="Sport" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Amount]"
+                      dataType="numeric"
+                      name="Amount"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Odds]"
+                      dataType="numeric"
+                      name="Odds"
+                      precision="5"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Won]"
+                      dataType="bool"
+                      name="Won" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[PlacedAt]"
+                      dataType="dbTimeStamp"
+                      name="PlacedAt" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EventDate]"
+                      dataType="dbTimeStamp"
+                      name="EventDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Tranformación de Datos (T)"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Tranformación de Datos (T)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Tranformación de Datos (T).Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Tranformación de Datos (T).Inputs[Derived Column Input].Columns[Won]"
+                      cachedDataType="bool"
+                      cachedName="Won"
+                      lineageId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Won]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task\Tranformación de Datos (T).Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Output].Columns[WonAsBooleanText]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="RedirectRow"
+                      length="5"
+                      lineageId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Output].Columns[WonAsBooleanText]"
+                      name="WonAsBooleanText"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET].Columns[Won]} ==  TRUE  ? "true" : "false"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Won ==  TRUE  ? "true" : "false"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task\Tranformación de Datos (T).Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Error Output]"
+              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Derived Column Error Output"
+              startId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Error Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task\Apuestas OLAP (L).Inputs[Entrada de destino de ADO NET]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task\Tranformación de Datos (T).Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Salida de origen de ADO NET]"
+              endId="Package\Data Flow Task\Tranformación de Datos (T).Inputs[Derived Column Input]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Data Flow Task\Apuestas Diarias OLTP (E).Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Data Flow Task"
+          TopLeft="178,63" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="211,42"
+          Id="Package\Data Flow Task\Apuestas Diarias OLTP (E)"
+          TopLeft="159,165" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Data Flow Task\Apuestas OLAP (L)"
+          TopLeft="46,328" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Data Flow Task\Tranformación de Datos (T)"
+          TopLeft="155,234" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Salida de origen de ADO NET]"
+          TopLeft="263.25,207">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="227.666666666667,276">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-95.1666666666667,52"
+              Start="0,0"
+              End="-95.1666666666667,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.0315398886827" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.0315398886827"
+                    Point2="0,21.0315398886827"
+                    Point3="-4,21.0315398886827" />
+                  <mssgle:LineSegment
+                    End="-91.1666666666667,21.0315398886827" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-91.1666666666667,21.0315398886827"
+                    Point2="-95.1666666666667,21.0315398886827"
+                    Point3="-95.1666666666667,25.0315398886827" />
+                  <mssgle:LineSegment
+                    End="-95.1666666666667,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Data Flow Task\Flat File Destination"
+          TopLeft="357,333" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Error Output]"
+          TopLeft="296.333333333333,276">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="148.666666666667,57"
+              Start="0,0"
+              End="148.666666666667,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.0538033395176" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.0538033395176"
+                    Point2="0,23.0538033395176"
+                    Point3="4,23.0538033395176" />
+                  <mssgle:LineSegment
+                    End="144.666666666667,23.0538033395176" />
+                  <mssgle:CubicBezierSegment
+                    Point1="144.666666666667,23.0538033395176"
+                    Point2="148.666666666667,23.0538033395176"
+                    Point3="148.666666666667,27.0538033395176" />
+                  <mssgle:LineSegment
+                    End="148.666666666667,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="9.37194661458335,28.0538033395176,129.9227734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Apuestas Diarias OLTP (E)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Apuestas OLAP (L)">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

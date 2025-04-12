@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="MINI-RAIDERW.SportsbookOLTP"
+  DTS:DTSID="{CD8906F4-4C5F-44D0-AB56-E04C488342FB}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=MINI-RAIDERW;Initial Catalog=SportsbookOLTP;Integrated Security=True;Encrypt=False;Application Name=SSIS-ETL-Diario-{CD8906F4-4C5F-44D0-AB56-E04C488342FB}MINI-RAIDERW.SportsbookOLTP;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
